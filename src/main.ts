@@ -9,13 +9,13 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
-      transform: true, //Transforma los datos a su tipo de dato correspondiente
+      transform: true,
       transformOptions: {
         enableImplicitConversion: true,
       },
     }),
   );
   await app.listen(process.env.PORT || 3000);
-  console.log(`Application is running on: https//localhost:3000`);
+  console.log(`Application is running on: http://localhost:3000/`);
 }
 bootstrap();
